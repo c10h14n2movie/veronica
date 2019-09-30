@@ -6,3 +6,8 @@ url: http://veronica.truejewels.com
 sass:
   sass_dir: assets/css/_sass
   style: compressed
+
+
+
+plugins:
+  - jekyll-seo-tag
