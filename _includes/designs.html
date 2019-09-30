@@ -1,0 +1,13 @@
+{% for item in site.data.main.designs %}
+<div class="col-md-6">
+    <div class="design-card card shadow">
+        <a href="/assets/images/{{item.image}}" data-toggle="lightbox" data-gallery="veronica-embroidery">
+        <img src="/assets/images/{{item.image}}" alt="{{item.description}}" class="image">
+        </a>
+        <div class="card-body">
+            <p>{{item.description}}</p>
+        </div>
+
+    </div>
+</div>
+{% endfor %}
