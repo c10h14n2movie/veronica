@@ -1,3 +1,5 @@
+TweenLite.set(".container", { visibility: "visible" });
+
 const header = document.querySelector('header');
 const logo = document.querySelector('.logo');
 const description = document.querySelector('.description');
