@@ -13,10 +13,11 @@ image: /assets/images/2017-08-22%2016.29.02.jpg
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap&text=VeronicaEmbdy" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap&text=VeronicaEmbdy"
+        rel="stylesheet">
+
     {% seo %}
-    
+
     <style>
         .logo {
             font-family: 'Fredericka the Great', cursive;
@@ -29,22 +30,22 @@ image: /assets/images/2017-08-22%2016.29.02.jpg
 
 <body>
     <header>
-      <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <div class="logo logo-container">
-                <h1>{{site.data.main.title}}</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="logo logo-container">
+                        <h1>{{site.data.main.title}}</h1>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </header>
 
     <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 text-center py-4">
-              <h3>{{site.data.main.description}}</h3>
-          </div>
+            <div class="col-12 text-center py-4">
+                <h3 class="description">{{site.data.main.description}}</h3>
+            </div>
         </div>
         <div class="row justify-content-center">
             {% include designs.html %}
@@ -54,14 +55,16 @@ image: /assets/images/2017-08-22%2016.29.02.jpg
     <footer>
         <div class="container">
             <div class="row justify-content-center">
-              <div class="col-12 col-4 text-center py-4">
-                <h4 class="text-white">{{site.data.main.title}}</h4>
-                <p class="text-white">{{site.data.main.description}}</p>
-                <p class="text-white">Email: <strong><a href="mailto:{{site.data.main.email}}">{{site.data.main.email}}</a></strong></p>
-                <p class="text-white">Phone: <strong><a href="tel:{{site.data.main.phone}}">{{site.data.main.phone}}</a></strong></p>
+                <div class="col-12 col-4 text-center py-4">
+                    <h4 class="text-white">{{site.data.main.title}}</h4>
+                    <p class="text-white">{{site.data.main.description}}</p>
+                    <p class="text-white">Email: <strong><a
+                                href="mailto:{{site.data.main.email}}">{{site.data.main.email}}</a></strong></p>
+                    <p class="text-white">Phone: <strong><a
+                                href="tel:{{site.data.main.phone}}">{{site.data.main.phone}}</a></strong></p>
 
+                </div>
             </div>
-          </div>
         </div>
     </footer>
 
@@ -77,19 +80,25 @@ image: /assets/images/2017-08-22%2016.29.02.jpg
         crossorigin="anonymous"></script>
     <script src="/assets/js/ekko-lightbox.js"></script>
     <script>
-    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox({
-                    // alwaysShowClose: true,
-                    onShown: function() {
-                        console.log('Checking our the events huh?');
-                    },
-                    onNavigate: function(direction, itemIndex) {
-                        console.log('Navigating '+direction+'. Current item: '+itemIndex);
-                    }
-                });
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox({
+                // alwaysShowClose: true,
+                onShown: function () {
+                    console.log('Checking our the events huh?');
+                },
+                onNavigate: function (direction, itemIndex) {
+                    console.log('Navigating ' + direction + '. Current item: ' + itemIndex);
+                }
             });
+        });
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
